@@ -3,391 +3,241 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=1024">
-  <title>Shaik Shaffi - Resume</title>
-  <!-- Google Fonts for modern, attractive typography -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&family=Roboto:wght@500;400&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-
+  <title>Shaik Shaffi - Data Analyst Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <style>
-    /* ----------- Page Layout ----------- */
     body {
-      background: #f5f8fa;
+      background: #f4f7fa;
       margin: 0;
-      min-height: 100vh;
-      font-family: 'Roboto', 'Open Sans', Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      font-family: 'Roboto', 'Montserrat', Arial, sans-serif;
+      color: #232323;
     }
-
-    .resume-wrapper {
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
       background: #fff;
-      border-radius: 18px;
-      box-shadow: 0 6px 32px rgba(44,62,80,0.18);
-      width: 80vw;
-      max-width: 950px;
-      min-height: 85vh;
-      margin: 5vh auto;
-      padding: 4%;
-      display: flex;
-      gap: 2.5rem;
-      /* 10% margin all around */
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(44,62,80,0.15);
+      padding: 40px 45px;
     }
-
-    .leftPanel {
-      background: linear-gradient(120deg, #484444 85%, #685e5e 100%);
-      border-radius: 16px;
-      color: #fff;
-      width: 34%;
-      padding: 2rem 1.5rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      box-shadow: 0 2px 14px rgba(72,68,68,0.1);
+    header {
+      text-align: center;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #e0e0e0;
     }
-
-    .rightPanel {
-      width: 66%;
-      padding: 1rem 2rem 1rem 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-    }
-
-    /* ----------- Profile Image ----------- */
-    .profile-img {
-      width: 120px;
-      height: 120px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 4px solid #fff;
-      margin-bottom: 1.6rem;
-      box-shadow: 0 2px 12px rgba(44,62,80,0.08);
-    }
-
-    /* ----------- Left Panel Sections ----------- */
-    .contact-info, .education, .skills {
-      width: 100%;
-      margin-bottom: 2rem;
-      font-size: 1.02rem;
-      letter-spacing: 0.01em;
-    }
-
-    .contact-info h2, .education h2, .skills h2 {
-      text-transform: uppercase;
+    .name {
+      font-size: 2.7rem;
       font-family: 'Montserrat', sans-serif;
-      font-size: 1.12rem;
-      margin-bottom: 0.7rem;
       font-weight: 700;
-      color: #fff;
-      letter-spacing: 0.08em;
-    }
-
-    .contact-details {
-      font-size: 0.98rem;
-      margin-bottom: 1.1rem;
-      line-height: 1.6;
-      word-break: break-word;
-    }
-
-    .contact-details a {
-      color: #d7cfcf;
-      text-decoration: underline;
-      word-break: break-all;
-    }
-
-    .education-entry {
-      margin-bottom: 0.9em;
-      padding-bottom: 0.2em;
-      border-bottom: 1px solid #7c7878;
-    }
-
-    .education-entry:last-child {
-      border-bottom: none;
-    }
-
-    .skills-list {
-      display: flex;
-      flex-direction: column;
-      gap: 0.55em;
-      margin-top: 0.7em;
-    }
-
-    .skills-item {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.98rem;
-    }
-
-    .skills-item .skill-label {
-      font-weight: 500;
-    }
-
-    .skills-item .skill-level {
-      background: #fff;
-      color: #484444;
-      border-radius: 6px;
-      padding: 0.1em 0.5em;
-      font-size: 0.95em;
-    }
-
-    /* ----------- Right Panel Sections ----------- */
-    .rightPanel h1 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: #484444;
-      margin-bottom: 0.2em;
-      letter-spacing: 0.07em;
-      text-align: left;
-    }
-
-    .title-role {
-      font-size: 1.22rem;
-      font-family: 'Open Sans', sans-serif;
-      font-weight: 600;
-      color: #685e5e;
-      margin-bottom: 1.5em;
-      text-align: left;
+      color: #3d3d5c;
       letter-spacing: 0.04em;
+      margin-bottom: 8px;
     }
-
-    .section {
-      margin-bottom: 2.2rem;
+    .role {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #2b84b0;
+      margin-bottom: 10px;
     }
-
-    .section h2 {
+    .contact {
+      font-size: 1.08rem;
+      margin-bottom: 6px;
+      color: #555;
+    }
+    .contact a {
+      color: #2b84b0;
+      text-decoration: none;
+      margin-right: 16px;
+    }
+    section {
+      margin-top: 32px;
+      margin-bottom: 32px;
+      page-break-after: always;
+    }
+    section:last-child {
+      page-break-after: auto;
+    }
+    h2 {
       font-family: 'Montserrat', sans-serif;
       font-size: 1.25rem;
-      color: #2d2d2d;
-      margin-bottom: 0.85em;
       font-weight: 700;
-      border-bottom: 2.5px solid #e6e6e6;
-      display: inline-block;
-      padding-bottom: 0.1em;
-      letter-spacing: 0.06em;
+      color: #2b84b0;
+      margin-bottom: 12px;
+      letter-spacing: 0.05em;
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 4px;
     }
-
-    .about-me {
-      font-size: 1.05em;
-      color: #3a3a3a;
-      text-align: justify;
-      line-height: 1.7;
-      margin-bottom: 0.7em;
-      font-family: 'Roboto', Arial, sans-serif;
-    }
-
-    /* ----------- Experience ----------- */
-    .experience-list {
-      list-style: none;
+    ul, ol {
+      margin: 0 0 8px 16px;
       padding: 0;
-      margin: 0;
-      font-size: 1.04em;
     }
-
-    .experience-item {
-      margin-bottom: 1.9em;
-      padding-bottom: 1em;
-      border-bottom: 1px solid #f0f0f0;
+    li {
+      margin-bottom: 8px;
+      line-height: 1.6;
     }
-
-    .experience-item:last-child {
-      border-bottom: none;
-    }
-
-    .job-header {
+    .skills-list, .cert-list, .project-list {
       display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 0.4em;
+      flex-wrap: wrap;
+      gap: 10px 35px;
+      margin-bottom: 16px;
     }
-
-    .job-title {
-      font-weight: bold;
-      color: #484444;
-      font-size: 1.02em;
-      font-family: 'Montserrat', sans-serif;
+    .skills-list span, .cert-list span, .project-list span {
+      background: #eaf6fb;
+      color: #24688f;
+      border-radius: 8px;
+      padding: 5px 18px;
+      font-size: 0.98rem;
+      font-family: 'Roboto', Arial, sans-serif;
+      margin-bottom: 3px;
+      margin-right: 8px;
     }
-    .job-company {
+    .experience-block {
+      margin-bottom: 20px;
+    }
+    .exp-header {
+      font-weight: 600;
+      color: #3d3d5c;
+      font-size: 1.08rem;
+    }
+    .exp-dates {
+      font-size: 0.99rem;
+      color: #6a7d8d;
+      margin-left: 10px;
       font-style: italic;
-      color: #767676;
-      font-size: 0.98em;
-      font-family: 'Open Sans', sans-serif;
     }
-
-    .job-period {
-      font-size: 0.95em;
-      color: #b1b1b1;
-      margin-left: 0.4em;
+    .exp-location {
+      font-size: 0.98rem;
+      color: #6a7d8d;
+      margin-left: 8px;
     }
-
-    .job-description {
-      font-size: 0.98em;
-      color: #444;
-      margin-top: 0.3em;
-      margin-left: 0.2em;
-      line-height: 1.55;
-      text-align: justify;
+    .exp-details {
+      margin-top: 6px;
+      margin-left: 10px;
+      color: #484848;
+      font-size: 1rem;
     }
-
-    /* ----------- Responsive ----------- */
-    @media (max-width: 900px) {
-      .resume-wrapper {
-        flex-direction: column;
-        width: 95vw;
-        padding: 2%;
-        gap: 1.5rem;
-      }
-      .leftPanel, .rightPanel {
-        width: 100%;
-        padding: 1.2rem;
-      }
-      .rightPanel {
-        padding-left: 1.2rem;
-      }
+    .education-block {
+      margin-bottom: 18px;
     }
-
+    @media (max-width: 700px) {
+      .container { padding: 15px 8px; }
+      section { margin-top: 18px; margin-bottom: 18px; }
+      header { padding-bottom: 8px; }
+      .name { font-size: 2rem; }
+    }
   </style>
 </head>
 <body>
-  <div class="resume-wrapper">
-    <div class="leftPanel">
-      <img src="your-photo.jpg" alt="Shaik Shaffi" class="profile-img">
-
-      <div class="contact-info">
-        <h2>Contact</h2>
-        <div class="contact-details">
-          <div><i class="fa fa-envelope"></i> shaik.shaffi.2024@gmail.com</div>
-          <div><i class="fa fa-phone"></i> 9704163834</div>
-          <div><i class="fa fa-map-marker"></i> H no 1-26, Saraswathi colony, Uppal, Hyderabad, 500039</div>
-          <div><i class="fa fa-calendar"></i> 23 Sep 1986</div>
-          <div><i class="fa fa-flag"></i> Indian | Married</div>
-          <div><i class="fa fa-linkedin"></i>
-            <a href="https://linkedin.com/in/shaik-shaffi-9..." target="_blank">linkedin.com/in/shaik-shaffi-9...</a>
-          </div>
+  <div class="container">
+    <header>
+      <div class="name">Shaik Shaffi</div>
+      <div class="role">Data Analyst</div>
+      <div class="contact">
+        Hyderabad, Telangana &bull; 
+        <a href="https://www.checkmyresume.site" target="_blank">checkmyresume.site</a> &bull; 
+        <a href="mailto:shaik.shaffi.2024@gmail.com">shaik.shaffi.2024@gmail.com</a> &bull; 
+        <a href="tel:9704163834">9704163834</a> &bull; 
+        <a href="https://linkedin.com/in/shaik-shaffi-9704163834" target="_blank">linkedin.com/in/shaik-shaffi-9704163834</a>
+      </div>
+    </header>
+    <section>
+      <h2>Profile</h2>
+      <div>
+        Results-driven professional with 4+ years of experience in customer service, now transitioning into data analytics with a strong foundation in Power BI, Excel, and data visualization. Proven ability to interpret customer behavior, identify trends, and deliver actionable insights that enhance service quality and operational efficiency. Skilled in storytelling with data, cross-functional collaboration, and leveraging analytical tools to solve real-world business problems. Passionate about turning raw data into meaningful strategies that drive performance and customer satisfaction.
+      </div>
+    </section>
+    <section>
+      <h2>Work Experience</h2>
+      <div class="experience-block">
+        <div class="exp-header">UNIFIED MENTOR <span class="exp-location">Hyderabad</span> <span class="exp-dates">06/2025 - Present</span></div>
+        <div class="exp-details">
+          Your Pathway to Lifelong Excellence! We're here to guide you on an incredible journey of skill growth and career advancement.<br>
+          <strong>Internship - Data Analytics & Visualization Project (6 months):</strong>
+          <ul>
+            <li>Collaborated on a data analytics project focused on job market trends for data analyst roles; leveraged datasets with 2,000+ entries.</li>
+            <li>Utilized Python libraries (NumPy, Pandas, Matplotlib) for data cleaning and visualization.</li>
+            <li>Conducted exploratory data analysis (EDA) to uncover patterns in salaries, company ratings, and job descriptions.</li>
+            <li>Built interactive dashboards with Plotly and Seaborn to visualize salary trends and sector-wise job availability.</li>
+          </ul>
         </div>
       </div>
-
-      <div class="education">
-        <h2>Education</h2>
-        <div class="education-entry">
-          <strong>B. Tech, Computer Science Engineering</strong><br>
-          <em>Princeton College of Engineering &amp; Technology, JNTU</em><br>
-          Sep 2004 – Apr 2009, Hyderabad, India
-        </div>
-        <div class="education-entry">
-          <strong>Intermediate, MPC</strong><br>
-          <em>Sri Chaitanya Junior College</em><br>
-          May 2002 – Jun 2004, Hyderabad, India
-        </div>
-        <div class="education-entry">
-          <strong>Matriculation, CBSE</strong><br>
-          <em>Kendriya Vidyalaya No. 2, Uppal</em><br>
-          Mar 1992 – Mar 2002, Hyderabad, India
+      <div class="experience-block">
+        <div class="exp-header">NULL CLASS <span class="exp-location">Remote</span> <span class="exp-dates">03/2025 - 05/2025</span></div>
+        <div class="exp-details">
+          <ul>
+            <li>Developed and deployed interactive dashboards in Power BI to visualize KPIs, enhancing cross-departmental decision-making.</li>
+          </ul>
         </div>
       </div>
-
-      <div class="skills">
-        <h2>Skills</h2>
-        <div class="skills-list">
-          <div class="skills-item">
-            <span class="skill-label">English</span>
-            <span class="skill-level">Professional</span>
-          </div>
-          <div class="skills-item">
-            <span class="skill-label">Hindi</span>
-            <span class="skill-level">Professional</span>
-          </div>
-          <div class="skills-item">
-            <span class="skill-label">Data Analysis & Visualization</span>
-            <span class="skill-level">Excel, SQL, PowerBI</span>
-          </div>
-          <div class="skills-item">
-            <span class="skill-label">Communication</span>
-            <span class="skill-level">Exceptional</span>
-          </div>
-          <div class="skills-item">
-            <span class="skill-label">Organizational Skills</span>
-            <span class="skill-level">Strong</span>
-          </div>
-          <div class="skills-item">
-            <span class="skill-label">Customer Satisfaction</span>
-            <span class="skill-level">Expert</span>
-          </div>
+      <div class="experience-block">
+        <div class="exp-header">Y-Axis Overseas <span class="exp-location">Hyderabad</span> <span class="exp-dates">08/2021 - 05/2024</span></div>
+        <div class="exp-details">
+          <ul>
+            <li>Managed and analyzed data from 70+ customer calls daily to improve service efficiency.</li>
+            <li>Implemented and trained new employees on customer service processes using data-driven insights.</li>
+            <li>Identified customer behavior patterns to enhance retention strategies.</li>
+            <li>Managed high-volume incoming, missed, and outbound calls, ensuring accurate data capture and client profiling.</li>
+            <li>Performed lead generation and cold calling, contributing to data-driven prospecting and pipeline development.</li>
+            <li>Collected, validated, and structured client data to support eligibility analysis and decision-making processes.</li>
+            <li>Collaborated with cross-functional teams and branch offices to align client needs with operational workflow.</li>
+            <li>Conducted data analysis on prospect profiles to assess visa eligibility, applying rule-based logic and compliance criteria.</li>
+            <li>Executed real-time form filling and issue documentation during calls, enhancing data accuracy and resolution tracking.</li>
+            <li>Interpreted customer queries and redirected them to domain-specific consultants, optimizing process efficiency.</li>
+          </ul>
         </div>
       </div>
-    </div>
-
-    <div class="rightPanel">
-      <h1>Shaik Shaffi</h1>
-      <div class="title-role">Lead Analyst</div>
-
-      <div class="section">
-        <h2>Profile</h2>
-        <div class="about-me">
-          I seek challenging opportunities where I can fully use my skills for the success of the organization. Respectful self-motivator gifted at finding reliable solutions for customer experience issues. Experienced in leading teams and implementing new processes, with a focus on data-driven decision making.
+      <div class="experience-block">
+        <div class="exp-header">Qconnect Solutions <span class="exp-location">Hyderabad</span> <span class="exp-dates">11/2019 - 03/2021</span></div>
+        <div class="exp-details">
+          <ul>
+            <li>Handled customer queries and analyzed feedback to improve service quality.</li>
+            <li>Maintained customer records, tracking trends for business insights.</li>
+          </ul>
         </div>
       </div>
-
-      <div class="section">
-        <h2>Experience</h2>
-        <ul class="experience-list">
-          <li class="experience-item">
-            <div class="job-header">
-              <span class="job-title">Lead Analyst</span>
-              <span class="job-company">y-axis overseas, Hyderabad</span>
-              <span class="job-period">Aug 2021 – May 2024</span>
-            </div>
-            <div class="job-description">
-              Managed 80+ customer calls daily. Implemented new Customer Service Representative training programs. Handled customer questions and complaints by phone. Performed lead generation and cold calling, contributing to data-driven prospecting and pipeline development.<br>
-              Collected, validated, and structured client data for eligibility analysis and decision-making. Collaborated with cross-functional teams and branch offices. Conducted data analysis on prospect profiles to assess visa eligibility, applying rule-based logic and compliance criteria.<br>
-              Executed real-time form filling and issue documentation during calls, enhancing data accuracy. Interpreted customer queries and redirected them to domain-specific consultants.
-            </div>
-          </li>
-          <li class="experience-item">
-            <div class="job-header">
-              <span class="job-title">Customer Services Associate</span>
-              <span class="job-company">QCONNECT SOLUTIONS LIMITED, Hyderabad</span>
-              <span class="job-period">Nov 2019 – Mar 2021</span>
-            </div>
-            <div class="job-description">
-              Responded to call center customer retention calls for residential services and product lines. Addressed customer inquiries and concerns regarding products and services. Provided resolution and support to maximize customer satisfaction.
-            </div>
-          </li>
-          <li class="experience-item">
-            <div class="job-header">
-              <span class="job-title">Computer Teacher</span>
-              <span class="job-company">ST. Marks High School, Hyderabad</span>
-              <span class="job-period">Jun 2017 – May 2020</span>
-            </div>
-            <div class="job-description">
-              Taught computer science to students from class 1 to 10. Designed lesson plans and hands-on activities to foster understanding of IT concepts.
-            </div>
-          </li>
-          <li class="experience-item">
-            <div class="job-header">
-              <span class="job-title">Jr. Engineer</span>
-              <span class="job-company">NSS Associates - India, Hyderabad</span>
-              <span class="job-period">Jan 2014 – Aug 2017</span>
-            </div>
-            <div class="job-description">
-              Contributed to a technology-driven consulting organization with a focus on delivering top-class services to clients in Civil Engineering, Architecture, and Project Management.
-            </div>
-          </li>
-          <li class="experience-item">
-            <div class="job-header">
-              <span class="job-title">Software Engineer (Trainee)</span>
-              <span class="job-company">Various Clients</span>
-            </div>
-            <div class="job-description">
-              Contributed to the development of software projects for prestigious clients such as DLRL, WESSEE, RCI, IRDE, Bharat Electronics Ltd, and ECIL. Assisted senior engineers in coding, testing, and debugging. Participated in team meetings to discuss project requirements and update progress. Received recognition for reliability and commitment.
-            </div>
-          </li>
-        </ul>
+    </section>
+    <section>
+      <h2>Skills</h2>
+      <div class="skills-list">
+        <span>Communication Skills</span>
+        <span>CRM Analytics</span>
+        <span>Customer Satisfaction & Conflict Resolution</span>
+        <span>Data Analysis & Visualization (Excel, SQL, Python, Power BI)</span>
+        <span>Data Cleaning & Transformation</span>
+        <span>Data Collection, Validation, Analysis</span>
+        <span>Cross-functional Collaboration</span>
+        <span>CRM Systems</span>
+        <span>Process Optimization</span>
+        <span>Client Profiling</span>
+        <span>Compliance, Issue Tracking, Lead Generation</span>
+        <span>Statistical Analysis & Reporting</span>
+        <span>Organizational & Time Management</span>
       </div>
-      <!-- Add more sections if desired, e.g., Certifications, Projects -->
-    </div>
+    </section>
+    <section>
+      <h2>Education</h2>
+      <div class="education-block">
+        <strong>Bachelor of Technology in Computer Science Engineering</strong><br>
+        PRINCETON COLLEGE OF ENGINEERING AND TECHNOLOGY, Hyderabad<br>
+        <span style="color:#6a7d8d;">09/2004 - 10/2008</span>
+      </div>
+      <div class="education-block">
+        <strong>Class 12</strong><br>
+        Sri Chaitanya, TSBIE - Telangana Board of Intermediate Education
+      </div>
+    </section>
+    <section>
+      <h2>Certifications</h2>
+      <div class="cert-list">
+        <span>Suncertified Java Professional - Sun Microsystems</span>
+      </div>
+    </section>
+    <section>
+      <h2>Projects</h2>
+      <div class="project-list">
+        <span>Data analytics project - “Analyzed job market data, built dashboards, and presented insights on salary trends and job availability.”</span>
+      </div>
+    </section>
   </div>
 </body>
 </html>
